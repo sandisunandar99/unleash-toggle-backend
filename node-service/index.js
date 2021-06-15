@@ -15,6 +15,7 @@ unleash.initialize({
     customHeaders: { Authorization: process.env.UNLEASH_TOKEN },
 })
 
+
 setInterval(() => {
   if (unleash.isEnabled('unleash-node-service')) {
     console.log('Toggle enabled');
