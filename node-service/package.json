@@ -1,0 +1,18 @@
+{
+  "name": "unleash-app",
+  "version": "1.0.0",
+  "description": "test implementation toggle using unleash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "author": "sandi sunandar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "unleash-client": "^3.8.1"
+  }
+}
