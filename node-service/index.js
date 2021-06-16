@@ -10,7 +10,7 @@ app.use(BodyParser.json())
 
 unleash.initialize({
     url: process.env.UNLEASH_URL,
-    appName: 'unleash-node-service',
+    appName: 'unleash-toggle',
     environment: process.env.APP_ENV,
     customHeaders: { Authorization: process.env.UNLEASH_TOKEN },
 })
@@ -23,6 +23,8 @@ setInterval(() => {
     console.log('Toggle disabled');
   }
 }, 1000);
+
+
 
 app.get("/api/ping", (req, res) => {
     res.json({
