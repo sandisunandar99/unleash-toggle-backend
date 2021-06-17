@@ -16,14 +16,28 @@ unleash.initialize({
 })
 
 
-setInterval(() => {
-  if (unleash.isEnabled('unleash-node-service')) {
-    console.log('Toggle enabled');
-  } else {
-    console.log('Toggle disabled');
-  }
-}, 1000);
+const context = {
+  userId: 'sandis',
+  remoteAddress: '192.168.1.1',
+};
 
+let i = 0;
+setInterval(() => {
+  if (unleash.isEnabled('contoh-toggle', context)) {
+    console.log(i++ +" "+unleash.isEnabled('contoh-toggle', context));
+  } else {
+    console.log(i++ +" "+unleash.isEnabled('contoh-toggle', context));
+  }
+}, 250);
+
+
+
+// if (unleash.isEnabled('contoh-toggle')) {
+//   //ketika dia enable maka fungsi ini akan dipake klo disable maka loss aja  
+//   createUserFaskes();
+// } else {
+//     crateUser();
+// }
 
 
 app.get("/api/ping", (req, res) => {

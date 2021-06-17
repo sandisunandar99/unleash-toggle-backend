@@ -13,8 +13,6 @@ import (
 func main() {
 	r := router.SetupRouter()
 
-	Unleash()
-
 	r.Run(":4321")
 }
 
